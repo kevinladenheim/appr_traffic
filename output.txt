@@ -1,0 +1,25 @@
+kpl@billybob:~/apprentice/traffic$ ./traffic.rb 
+
+
+ 0==> (1) In CURTIS BAY road construction. roadway reduced to one lane on I-695 INNER LOOP between X1/QUARANTINE RD and MD-10/SB X2/NB X3
+ 1==> (0) In ELLICOTT CITY off-ramp closed on US-40 EB at US-29 as reported by dot
+ 2==> (0) In BALTIMORE closed due to road construction on OLD FREDERICK RD BOTH EB/WB between EDMONDSON AVENUE and DUNLAND RD as reported by dot
+ 3==> (0) In ANNE ARUNDEL off-ramp closed on MD-10 (ARUNDEL EXWY) NB at I-695 as reported by dot
+ 4==> (1) In BALTIMORE road construction. left lane closed on I-83 (JONES FALLS XWY) SB between COLD SPRING LN and X7/28TH ST/DRUID PARK LAKE DR
+ 5==> (1) In BALTIMORE road construction. left lane closed on I-83 (JONES FALLS XWY) NB between X6/US-1/NORTH AVE and X8/FALLS RD as reported by n/a
+ 6==> (1) In CURTIS BAY road construction. roadway reduced to one lane on I-695 OUTER LOOP between MD-10/SB X2/NB X3 and X1/QUARANTINE RD
+ 7==> (0) In ANNE ARUNDEL major road construction on ARUNDEL MILLS BLVD BOTH EB/WB between HWY 295/BALTIMORE WASHINGTON PKWY and DORCHESTER BOULEVARD in HANOVER as reported by dot
+ 8==> (0) In GLEN BURNIE road construction on ORDNANCE RD EB between BAYMEADOW DR and HWY 173/PENNINGTON AVE in BALTIMORE as reported by dot
+ 9==> (0) In TOWSON long-term road construction on CHARLES ST BOTH NB/SB between KENILWORTH DR and BELLONA AVE as reported by cameras
+10==> (0) In BALTIMORE closed due to road construction on SINCLAIR LN BOTH EB/WB between EDISON HWY and HWY 151/ERDMAN AVE as reported by dot
+11==> (0) In BALTIMORE alternating traffic due to construction work on HWY 144 BOTH EB/WB at I 695 as reported by dot
+12==> (0) In BALTIMORE off-ramp closed on I-95 SB at ODONNELL ST/X57 as reported by dot
+13==> (0) In FORT GEORGE G MEADE road construction. right lane closed on HWY 32 EB between MD-198/LAUREL FORT MEADE RD and MD-175/ANNAPOLIS RD
+14==> (0) In HALETHORPE road construction. roadway reduced to one lane on BALTIMORE WASHINGTON PARKWAY NB between I-695 and I-895/HARBOR TUNNEL THWY
+
+
+HTTP Status: Request succeeded
+
+Incidents:     15
+
+
