@@ -1,0 +1,4 @@
+Usage: traffic lat1 lon1 lat2 lon2
+where coordinates can be ints or floats
+
+Dumps traffic data taken from Mapquest and Bing to the console
