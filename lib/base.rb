@@ -1,12 +1,13 @@
 require "typhoeus"
 
 class Base
-  attr_reader :data, :message
+  attr_reader :data, :message, :code
 
   def initialize(cue)
     @cue = cue
     @success = false
     @message = ""
+    @code = ""
   end
 
   def success?
@@ -20,6 +21,7 @@ class Base
     request = Typhoeus::Request.new(url,options)
 
     request.on_complete do |response|
+      @code = response.code.to_s
       if response.success?
         @success = true
         @message = "Request succeeded"
