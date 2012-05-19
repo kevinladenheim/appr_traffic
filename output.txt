@@ -1,25 +1,39 @@
-kpl@billybob:~/apprentice/traffic$ ./traffic.rb 
+kpl@billybob:~/apprentice/traffic$ ./traffic.rb 39.0 -77.0 40.0 -76.0
 
 
- 0==> (1) In CURTIS BAY road construction. roadway reduced to one lane on I-695 INNER LOOP between X1/QUARANTINE RD and MD-10/SB X2/NB X3
- 1==> (0) In ELLICOTT CITY off-ramp closed on US-40 EB at US-29 as reported by dot
- 2==> (0) In BALTIMORE closed due to road construction on OLD FREDERICK RD BOTH EB/WB between EDMONDSON AVENUE and DUNLAND RD as reported by dot
- 3==> (0) In ANNE ARUNDEL off-ramp closed on MD-10 (ARUNDEL EXWY) NB at I-695 as reported by dot
- 4==> (1) In BALTIMORE road construction. left lane closed on I-83 (JONES FALLS XWY) SB between COLD SPRING LN and X7/28TH ST/DRUID PARK LAKE DR
- 5==> (1) In BALTIMORE road construction. left lane closed on I-83 (JONES FALLS XWY) NB between X6/US-1/NORTH AVE and X8/FALLS RD as reported by n/a
- 6==> (1) In CURTIS BAY road construction. roadway reduced to one lane on I-695 OUTER LOOP between MD-10/SB X2/NB X3 and X1/QUARANTINE RD
- 7==> (0) In ANNE ARUNDEL major road construction on ARUNDEL MILLS BLVD BOTH EB/WB between HWY 295/BALTIMORE WASHINGTON PKWY and DORCHESTER BOULEVARD in HANOVER as reported by dot
- 8==> (0) In GLEN BURNIE road construction on ORDNANCE RD EB between BAYMEADOW DR and HWY 173/PENNINGTON AVE in BALTIMORE as reported by dot
- 9==> (0) In TOWSON long-term road construction on CHARLES ST BOTH NB/SB between KENILWORTH DR and BELLONA AVE as reported by cameras
-10==> (0) In BALTIMORE closed due to road construction on SINCLAIR LN BOTH EB/WB between EDISON HWY and HWY 151/ERDMAN AVE as reported by dot
-11==> (0) In BALTIMORE alternating traffic due to construction work on HWY 144 BOTH EB/WB at I 695 as reported by dot
-12==> (0) In BALTIMORE off-ramp closed on I-95 SB at ODONNELL ST/X57 as reported by dot
-13==> (0) In FORT GEORGE G MEADE road construction. right lane closed on HWY 32 EB between MD-198/LAUREL FORT MEADE RD and MD-175/ANNAPOLIS RD
-14==> (0) In HALETHORPE road construction. roadway reduced to one lane on BALTIMORE WASHINGTON PARKWAY NB between I-695 and I-895/HARBOR TUNNEL THWY
+ 0==> (0) In ANNE ARUNDEL major road construction on ARUNDEL MILLS BLVD BOTH EB/WB between HWY 295/BALTIMORE WASHINGTON PKWY and DORCHESTER BOULEVARD in HANOVER as reported by dot
+ 1==> (0) In GLEN BURNIE road construction on ORDNANCE RD EB between BAYMEADOW DR and HWY 173/PENNINGTON AVE in BALTIMORE as reported by dot
+ 2==> (0) In ANNE ARUNDEL on-ramp closed on MD-10 (ARUNDEL EXWY) NB at I-695 as reported by dot
+ 3==> (0) In TOWSON long-term road construction on CHARLES ST BOTH NB/SB between KENILWORTH DR and BELLONA AVE as reported by cameras
+ 4==> (1) In CURTIS BAY road construction. roadway reduced to one lane on I-695 OUTER LOOP between MD-10/SB X2/NB X3 and X1/QUARANTINE RD
+ 5==> (1) In CURTIS BAY road construction. roadway reduced to one lane on I-695 INNER LOOP between X1/QUARANTINE RD and MD-10/SB X2/NB X3
+ 6==> (1) In BALTIMORE road construction. two lanes closed on I-95 NB between KEY HIGHWAY and FORT MCHENRY TUNNEL
+ 7==> (0) In ADELPHI exit ramp closed on NEW HAMPSHIRE AVENUE NB at I-495 THE BELTWAY as reported by mcdonalds mobile unit
+ 8==> (1) In BALTIMORE road construction. left lane closed on I-83 (JONES FALLS XWY) SB between X8/FALLS RD and X7/28TH ST/DRUID PARK LAKE DR as reported by n/a
+ 9==> (1) In BALTIMORE road construction. left lane closed on I-83 (JONES FALLS XWY) NB between X6/US-1/NORTH AVE and X7/28TH ST/DRUID PARK LAKE DR as reported by n/a
+10==> (0) In ELLICOTT CITY on-ramp closed on US-40 EB at US-29 as reported by dot
+11==> (0) In BALTIMORE closed due to road construction on SINCLAIR LN BOTH EB/WB between EDISON HWY and HWY 151/ERDMAN AVE as reported by dot
+12==> (0) In BALTIMORE closed due to road construction on OLD FREDERICK RD BOTH EB/WB between EDMONDSON AVENUE and DUNLAND RD as reported by dot
+13==> (0) In BALTIMORE road construction. two lanes closed on LIGHT ST SB between E PRATT ST and E LEE ST as reported by dot
+14==> (0) In OWINGS MILLS road construction. right lane closed on I-795 SB between X4/OWINGS MILLS BLVD and I-695 in REISTERSTOWN as reported by dot
+15==> (0) In HARFORD traffic alternating directions due to road construction on US-1 BOTH NB/SB between SHURESVILLE RD and HWY 222/SUSQUEHANNA RIVER RD in CECIL COUNTY as reported by dot
+16==> (1) In HARFORD incident cleared on US-1/BELAIR RD NB at US 1/CONOWINGO RD as reported by dot
 
 
-HTTP Status: Request succeeded
+ 0==> (Moderate) W Rogers Ave is one way WB from Park Heights Ave to Winner Ave - Preakness - traffic modifications|| ALSO: Winner Ave is one way NB from Hayward Ave to Rogers Ave - Manhattan Ave is one way EB from Winner Ave to Pimlico Rd - Whitney Ave is one way WB from Pimlico Rd to Key Ave - Sulgrave Ave is one way WB from Stuart Ave to Highgate Ave -
+ 1==> (Moderate) Rogers Ave is closed between Winner Ave and Norther Pky - Preakness
+ 2==> (Moderate) Sinclair Ln is closed in both directions at Edison Hwy for repair of the Sinclair Ln Bridge (over CSX train tracks) - construction
+ 3==> (Moderate) SB Light St between Pratt St and Lee St - utility work
+ 4==> (Minor) in both directions at 28th St (#7) - emergency repair work
+ 5==> (Moderate) in both directions at Chesapeake Bay Brg - construction
+ 6==> (Moderate) NB RT-1|Conowingo Rd on the Conowingo Dam Bridge between Shuresville Rd and RT-222 - construction
+ 7==> (Minor) at Owings Mills Blvd (#4) - construction
+ 8==> (Serious) ramp to OL I-695 Beltway is closed due to construction
+ 9==> (Moderate) Ft McHenry Tunnel Right Tube - construction
+10==> (Minor) at US-40 Baltimore National Pk - construction
+11==> (Moderate) Ramp to WB RT-372 Wilkens Av (#12C) is closed due to construction
 
-Incidents:     15
+
+kpl@billybob:~/apprentice/traffic$ 
 
 
