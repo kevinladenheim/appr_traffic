@@ -20,41 +20,37 @@ module Fetchers
       @bing_api_key = keys[1].strip!      
     end
 
+
     # needs to catch error when request fails
     def fetch_mq
         http_request("#{MQ_BASE_URL}/traffic/v1/incidents?key=#{@mq_api_key}&callback=handleIncidentsResponse&boundingBox=#{@lat1},\
 #{@lon1},#{@lat2},#{@lon2}&filters=construction,incidents&inFormat=kvp&outFormat=xml") do |body|
         doc = Nokogiri::XML(body) 
-      
-        # is it possible to supress the tags?
-        severity = doc.xpath("//severity")
-        fullDesc = doc.xpath("//fullDesc")
-        lat = doc.xpath("//lat")
-        lon = doc.xpath("//lng")
-        utc = doc.xpath("//startTime")
+        #doc = Nokogiri.XML(body, nil, 'UTF-8') force encoding
         
-        print "\n\n"
-
         descs = []
         severities = []
         lats = []
         lons = []
-        utcs = []
+        utcs = []        
+        
+        fullDesc = doc.xpath("//fullDesc")
+        severity = doc.xpath("//severity")
+        lat = doc.xpath("//lat")
+        lon = doc.xpath("//lng")
+        utc = doc.xpath("//startTime")
+ 
+        incidents = fullDesc.length()
 
-        for i in 0..fullDesc.length - 1
-          # both approaches seem too complicated          
-          # if there are zero tag matches --> crash
-          severities[i] = /.*<severity>(.*)<\/severity>.*/.match(severity[i].to_s)[1]  
-          descs[i] = /.*<fullDesc>(.*)<\/fullDesc>.*/.match(fullDesc[i].to_s)[1]
-          lats[i] = /.*<lat>(.*)<\/lat>.*/.match(lat[i].to_s)[1]
-          lons[i] = /.*<lng>(.*)<\/lng>.*/.match(lon[i].to_s)[1]
-          utcs[i] = /.*<startTime>(.*)<\/startTime>.*/.match(utc[i].to_s)[1]
-
-          #severities[i] = severity[i].to_s.sub("<severity>","").sub("</severity>","")
-          #descs[i] = fullDesc[i].to_s.sub("<fullDesc>", "").sub("</fullDesc>", "")          
+        while fullDesc.length() > 0
+          descs << fullDesc.pop().inner_text()
+          severities << severity.pop().inner_text()
+          lats << lat.pop().inner_text()
+          lons << lon.pop().inner_text()
+          utcs << utc.pop().inner_text()
         end
-               
-        @data = { mq_incidents: fullDesc.length, 
+     
+        @data = { mq_incidents: incidents, 
           mq_descs: descs,  
           mq_severities: severities,
           mq_latitudes: lats,
@@ -72,8 +68,8 @@ module Fetchers
         # maybe because it didn't define one like the bing data does
         severity = doc.xpath("//xmlns:Severity")
         fullDesc = doc.xpath("//xmlns:Description")
-        latitude = doc.xpath("//xmlns:Latitude")
-        longitude = doc.xpath("//xmlns:Longitude")
+        lat = doc.xpath("//xmlns:Latitude")
+        lon = doc.xpath("//xmlns:Longitude")
         utc = doc.xpath("//xmlns:LastModifiedUTC")
 
         descs = []  
@@ -82,15 +78,17 @@ module Fetchers
         lons = []
         utcs = []
 
-        for i in 0..fullDesc.length - 1
-          severities[i] = severity[i].to_s.sub("<Severity>","").sub("</Severity>","")
-          descs[i] = fullDesc[i].to_s.sub("<Description>", "").sub("</Description>", "")
-          lats[i] = latitude[i].to_s.sub("<Latitude>","").sub("</Latitude>","")
-          lons[i] = longitude[i].to_s.sub("<Longitude>","").sub("</Longitude>","")
-          utcs[i] = utc[i].to_s.sub("<LastModifiedUTC>","").sub("</LastModifiedUTC>","")
+        incidents = fullDesc.length()
+
+        while fullDesc.length() > 0
+          descs << fullDesc.pop().inner_text()
+          severities << severity.pop().inner_text()
+          lats << lat.pop().inner_text()
+          lons << lon.pop().inner_text()
+          utcs << utc.pop().inner_text()
         end
 
-        @data = { bing_incidents: fullDesc.length,
+        @data = { bing_incidents: incidents,
             bing_descs: descs,
             bing_severities: severities,
             bing_latitudes: lats,
